@@ -1,0 +1,12 @@
+
+<app-mainslider></app-mainslider>
+<app-catslider></app-catslider>
+
+<div class="container">
+  <input [(ngModel)]="searchTerm" type="text" class="w-75 m-auto form-control p-3 my-5" placeholder="Search...">
+  <div class="row">
+    <div *ngFor="let product of products|search:searchTerm" class="col-md-3">
+      <app-product [product]="product"></app-product>
+    </div>
+  </div>
+</div>

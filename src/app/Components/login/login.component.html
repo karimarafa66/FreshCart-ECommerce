@@ -1,0 +1,33 @@
+<div class="container">
+  <h3> Login Now:</h3>
+  <hr>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <!-- Username -->
+
+
+      <!-- Email -->
+      <label for="" class="my-2">Email</label>
+      <input type="email" placeholder="email..." class="form-control mb-1" formControlName="email" />
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched " class="alert text-danger">
+        <p *ngIf="loginForm.get('email')?.getError('required')">Email is required</p>
+        <p *ngIf="loginForm.get('email')?.getError('email')">Enter valid Email</p>
+      </div>
+
+      <!-- password -->
+      <label for="" class="my-2">Password</label>
+      <input  type="password" placeholder="password..." class="form-control mb-1" formControlName="password"/>
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="alert text-danger">
+        <p *ngIf="loginForm.get('password')?.getError('required')">Password is Required</p>
+        <p *ngIf="loginForm.get('password')?.getError('pattern')">Minimum eight characters, at least one letter, one number and one special character
+        </p>
+      </div>
+
+
+
+
+
+
+
+    <button [disabled]="loginForm.status == 'INVALID'" type="submit"  class="btn btn-success bg-main text-white ms-auto d-block ">Login</button>
+    </form>
+  </div>

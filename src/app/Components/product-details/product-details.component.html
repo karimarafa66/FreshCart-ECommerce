@@ -1,0 +1,23 @@
+
+
+
+
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-3">
+      <img class="w-100" [src]="productDetails?.imageCover" />
+  </div>
+  <div class="col-md-9">
+    <h2>{{ productDetails?.title }}</h2>
+    <p> {{productDetails?.description}}</p>
+    <p>{{ productDetails?.category.name }}</p>
+    <!-- <span class="text-decoration-line-through">{{ productDetails?.price  }} EGP </span> -->
+    <p>
+      <span class="text-main">{{productDetails?.price | currency:'EGP'}}</span>
+    </p>
+
+
+      <button  (click)="addProductToCart(productDetails.id)" class="btn bg-main  text-white w-100 py-2"><i class="fa-solid fa-plus"> </i>  Add To Cart</button>
+
+    </div>
+</div>
