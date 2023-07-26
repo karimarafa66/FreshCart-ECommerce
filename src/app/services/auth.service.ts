@@ -9,7 +9,7 @@ import jwt_decode from 'jwt-decode';
   providedIn: 'root',
 })
 export class AuthService implements OnInit {
-  baseUrl: string = 'https://route-ecommerce-app.vercel.app/api/v1/auth/';
+  baseUrl: string = 'https://ecommerce.routemisr.com/api/v1/auth/';
 
   userIsLogedIn = new BehaviorSubject(false);
 

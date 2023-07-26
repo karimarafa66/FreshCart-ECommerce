@@ -82,9 +82,9 @@
         <li *ngIf="_AuthService.userIsLogedIn.value" class="mx-2 nav-item">
           <a class="nav-link" (click)="_AuthService.logout()">Logout</a>
         </li>
-        <li *ngIf="_AuthService.userIsLogedIn.value" class="mx-2 nav-item">
+        <!-- <li *ngIf="_AuthService.userIsLogedIn.value" class="mx-2 nav-item">
           <a class="nav-link" routerLink="/settings">Settings</a>
-        </li>
+        </li> -->
         <li *ngIf="_AuthService.userIsLogedIn.value" class="nav-item mx-2">
           <a class="nav-link" routerLink="cart" routerLinkActive="active">
             <i class="fa-solid fa-cart-shopping "></i>
